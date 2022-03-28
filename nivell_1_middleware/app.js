@@ -7,21 +7,26 @@ console.log(`El número 1 es: ${num1}`);
 var num2 = numeros.num2
 console.log(`El número 2 es: ${num2}`);
 
+var suma = funciones.suma(num1,num2)**2
+var resta = funciones.resta(num1,num2)**3
+
+var div = num1/2
+var div2 = num2/2
+var multiplicacion = funciones.multiplicacion(div,div2)
+
 app.use((next) => {
-  console.log(`El cuadrat de ${num1} + ${num2} es:`)
-  console.log((funciones.suma(num1,num2))**2)
+  console.log(`El cuadrat de ${num1} + ${num2} es: ${suma}`)  
   next()
 })
+
 app.use((next) => {
-  console.log(`El cub de ${num1} - ${num2} es:`)
-  console.log(funciones.resta(num1,num2)**3)
+  console.log(`El cub de ${num1} - ${num2} es: ${resta}`)
   next()
 })
+
 app.use((next) => {
-  var div = num1/2
-  var div2 = num2/2
-  console.log(`${num1}/2 i ${num2}/2 multiplicats entre ells és:`)
-  console.log(funciones.multiplicacion(div,div2))
+  console.log(`${num1}/2 i ${num2}/2 multiplicats entre ells és: ${multiplicacion}`)
   next()
 })
+
 app.get();

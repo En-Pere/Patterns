@@ -11,7 +11,7 @@ const App = () => {
 
   const get = () => {
     runMiddlewares(0)
-    console.log('*END*')
+    console.log("Devuelve este texto en la petición GET")
   }
 
   return {
